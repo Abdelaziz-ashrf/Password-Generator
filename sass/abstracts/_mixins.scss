@@ -31,24 +31,24 @@
 }
 
 @mixin breakpoints($point){
-    @if $point == mobile {
+    @if $point == small {
         @media(max-width: 767px){
             @content;
         }
-    }@else if($point == small ){
+    }@else if($point == medium ){
         @media((min-width: 767px) and (max-width: 991px)){
             @content;
         }
-    }@else if($point == medium ){
-        @media((min-width: 992px) and (max-width:1199px)){
+    }@else if($point == large ){
+        @media((min-width: 992px)){
             @content;
         }
-    }@else if($point == large ){
+    }@else if($point == x-large ){
         @media((min-width: 1200px)){
             @content;
         }
-    }
-}
+
+    }}
 
 
 
